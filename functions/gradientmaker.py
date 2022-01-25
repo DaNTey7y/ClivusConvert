@@ -1,6 +1,6 @@
 import re
 from PIL import Image, ImageDraw
-from generate_random_string import generate_random_string
+from functions.generate_random_string import generate_random_string
 
 
 letter_colors = {
@@ -51,7 +51,6 @@ def text_to_gradient(text, amount):
 
     for w in sorted_keys:
         sorted_occurence[w] = occurrence[w]
-    print(sorted_occurence)
     colors = [tuple(letter_colors[i]) for i in list(sorted_occurence.keys())][-amount:]
 
 
@@ -77,7 +76,7 @@ def text_to_gradient(text, amount):
                 c_b += b_step
 
     path = generate_random_string(9)
-    image.save(f'pictures/{path}.png')
+    image.save(f'static/pictures/{path}.png')
 
 
     return path
