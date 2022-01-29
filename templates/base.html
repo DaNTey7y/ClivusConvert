@@ -13,11 +13,21 @@
     <body>
         <header>
             <nav>
-                <!-- сюда навигацию въебать -->
+                <div class="navigation_block">
+                    <span id="main-page">
+                        <button type="button"><a href="/home">Главная</a></button>
+                    </span>
+                    <span id="text-image-convert">
+                        <button><a href="/text-to-gradient">Текст - Градиент</a></button>
+                    </span>
+                    <span id="image-audio-convert">
+                        <button><a href="/image-to-audio">Картинка - Аудио</a></button>
+                    </span>
+                </div>
             </nav>
         </header>
         <!-- Главная часть -->
-        <main role="main" class="container">
+        <main role="main">
             {% block content %}{% endblock %}
         </main>
         <!---->
