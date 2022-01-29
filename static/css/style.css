@@ -1,0 +1,86 @@
+nav {
+    background: #4f0870;
+    padding: 12px 0;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.navigation_block {
+    margin-left: 25%;
+}
+
+.navigation_block span a {
+    -webkit-text-stroke: 2px black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 160%;
+    font-family:Comic Sans Ms;
+    color: #a7baeb;
+}
+
+.navigation_block span button {
+    background-color: #440761;
+    border: none;
+    border-radius: 20px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+span#text-image-convert {
+    margin-right: 2%;
+}
+
+span#main-page {
+    margin-right: 10%;
+}
+
+.sections h2 {
+    font-size: 250%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 3%;
+}
+
+button.select-button {
+    width: 480px;
+    height: 540px;
+    box-shadow: 10px 10px 5px black;
+    background-color: #312b33;
+    border: 4px solid gray;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+button.select-button img {
+    margin-bottom: 20px;
+    width: 96px;
+}
+
+div#left-button {
+    padding-left: 16.5%;
+    padding-right: 8.5%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    border-right: 5px dashed white;
+    display: inline-block;
+}
+
+div#right-button {
+    padding-left: 8.5%;
+    display: inline-block;
+}
+
+.log {
+    background-color: orange;
+    color: black;
+}
+
+body {
+    background: url('../pictures/background.jpg') no-repeat;
+    background-size: 100%;
+}
