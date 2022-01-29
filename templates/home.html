@@ -1,5 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Это база</h1>
+    <div class="sections">
+        <div class="log"><h2>Выберите одну из опций епта</h2></div>
+        <div id="left-button">
+            <button class="select-button" type="button">
+                <img src='https://cdn.frankerfacez.com/emoticon/317258/4'/>
+                <h3>Создать картинку</h3>
+                <p>В этом разделе вы можете получить
+                обработанную картинку-градиент из
+                введенного вами текста, после чего
+                скачать картинку или поставить её
+                прямо в фон сайта.</p>
+            </button>
+        </div>
+        <div id="right-button">
+            <button class="select-button" type="button">
+                <img src='https://cdn.frankerfacez.com/emoticon/317258/4'/>
+                <h3>Создать аудио</h3>
+                <p>В этом разделе вы можете получить
+                обработанные аудиосигналы на основе
+                любого изображения, после чего
+                скачать аудиофайл или прослушать
+                его прямо на сайте.</p>
+            </button>
+        </div>
+    </div>
 {% endblock %}
