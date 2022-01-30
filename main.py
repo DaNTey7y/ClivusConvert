@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from functions.generate_random_string import generate_random_string
+from random import choice
 
 
 app = Flask(__name__)
@@ -8,7 +9,11 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 @app.route('/home', methods=['GET'])
 def home():
-    return render_template('home.html', title='База')
+    playlist = ['static/audio/shit.mp3', 'static/audio/banger.mp3',
+                'static/audio/ochko.mp4', 'static/audio/ochko1.mp4',
+                'static/audio/shit2.mp3', 'static/audio/shit3.mp3']
+    music = choice(playlist)
+    return render_template('home.html', title='База', music=music)
 
 
 def main():
