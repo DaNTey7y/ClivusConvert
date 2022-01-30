@@ -10,9 +10,8 @@ app = Flask(__name__)
 @app.route('/home', methods=['GET'])
 def home():
     playlist = ['static/audio/shit.mp3', 'static/audio/banger.mp3',
-                'static/audio/ochko.mp4', 'static/audio/shedevr.mp3',
-                'static/audio/shit2.mp3', 'static/audio/shit3.mp3',
-                'static/audio/govno.mp3']
+                'static/audio/govno.mp3', 'static/audio/shedevr.mp3',
+                'static/audio/shit2.mp3', 'static/audio/shit3.mp3']
     music = choice(playlist)
     return render_template('home.html', title='База', music=music)
 

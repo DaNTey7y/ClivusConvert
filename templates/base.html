@@ -9,7 +9,11 @@
               crossorigin="anonymous">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <title>{{ title }}</title>
-        <audio src="{{ music }}" autoplay loop> </audio>
+        <audio src="{{ music }}" autoplay loop></audio>
+        <script>
+            let audio = document.querySelector('audio');
+            audio.volume = 0.08;
+        </script>
     </head>
     <body>
         <header>
