@@ -2,7 +2,6 @@ import re
 from PIL import Image, ImageDraw
 from functions.generate_random_string import generate_random_string
 
-
 letter_colors = {
     'а': [249, 11, 16],
     'б': [124, 86, 81],
@@ -53,7 +52,6 @@ def text_to_gradient(text, amount):
         sorted_occurence[w] = occurrence[w]
     colors = [tuple(letter_colors[i]) for i in list(sorted_occurence.keys())][-amount:]
 
-
     image_height, image_width = 1080, 1920
     image = Image.new('RGB', (image_width, image_height), 'white')
     draw = ImageDraw.Draw(image)
@@ -62,15 +60,16 @@ def text_to_gradient(text, amount):
     for i in range(amount):
         if i < amount - 1:
             current_color, desired_color = colors[i], colors[i + 1]
-            r_diff, g_diff, b_diff = desired_color[0] - current_color[0],\
-                                     desired_color[1] - current_color[1],\
+            r_diff, g_diff, b_diff = desired_color[0] - current_color[0], \
+                                     desired_color[1] - current_color[1], \
                                      desired_color[2] - current_color[2]
-            r_step, g_step, b_step = r_diff / one_gradient_width,\
-                                     g_diff / one_gradient_width,\
+            r_step, g_step, b_step = r_diff / one_gradient_width, \
+                                     g_diff / one_gradient_width, \
                                      b_diff / one_gradient_width
             c_r, c_g, c_b = current_color
             for j in range(one_gradient_width):
-                draw.line((i * one_gradient_width + j, 0, i * one_gradient_width + j, image_height), (int(c_r), int(c_g), int(c_b)))
+                draw.line((i * one_gradient_width + j, 0, i * one_gradient_width + j, image_height),
+                          (int(c_r), int(c_g), int(c_b)))
                 c_r += r_step
                 c_g += g_step
                 c_b += b_step
@@ -78,6 +77,4 @@ def text_to_gradient(text, amount):
     path = generate_random_string(9)
     image.save(f'static/pictures/{path}.png')
 
-
     return path
-
