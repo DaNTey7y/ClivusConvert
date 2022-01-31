@@ -3,7 +3,7 @@ nav {
     padding: 12px 0;
     padding-bottom: 20px;
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 
 .navigation_block {
@@ -62,7 +62,7 @@ button.select-button img {
 }
 
 div#left-button {
-    padding-left: 16.5%;
+    padding-left: 15%;
     padding-right: 8.5%;
     padding-top: 2%;
     padding-bottom: 4%;
