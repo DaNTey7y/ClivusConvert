@@ -9,7 +9,10 @@ app = Flask(__name__)
 playlist = ['static/audio/shit.mp3', 'static/audio/teplovizor.mp3',
             'static/audio/govno.mp3', 'static/audio/banger.mp3',
             'static/audio/shit2.mp3', 'static/audio/shit3.mp3',
-            'static/audio/cock.mp3', 'static/audio/shedevr.mp3']
+            'static/audio/cock.mp3', 'static/audio/shedevr.mp3',
+            'static/audio/slit.mp3']
+
+background_image = 'static/pictures/background.jpg'
 
 
 @app.route('/', methods=['GET'])
@@ -18,6 +21,7 @@ def home():
     params = dict()
     params['title'] = 'База'
     params['music'] = choice(playlist)
+    params['background'] = background_image
     return render_template('home.html', **params)
 
 
@@ -27,6 +31,7 @@ def text_to_gradient():
         params = dict()
         params['title'] = 'Сучий градиент'
         params['music'] = choice(playlist)
+        params['background'] = background_image
         return render_template('text-to-gradient.html', **params)
     elif request.method == 'POST':
         return '123'
@@ -38,6 +43,7 @@ def image_to_audio():
         params = dict()
         params['title'] = 'Тайлер Дёрден'
         params['music'] = choice(playlist)
+        params['background'] = background_image
         return render_template('text-to-gradient.html', **params)
     elif request.method == 'POST':
         return 'Мы вообще будем это делать?'
