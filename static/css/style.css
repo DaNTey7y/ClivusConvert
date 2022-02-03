@@ -43,8 +43,10 @@ span#main-page {
 }
 
 button.select-button {
-    width: 480px;
-    height: 540px;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    max-width: 480px;
+    max-height: 540px;
     box-shadow: 10px 10px 5px black;
     background-color: #312b33;
     border: 4px solid gray;
@@ -57,7 +59,7 @@ button.select-button {
 }
 
 button.select-button img {
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     width: 96px;
 }
 
