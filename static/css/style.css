@@ -1,9 +1,9 @@
 nav {
     background: #4f0870;
-    padding: 12px 0;
-    padding-bottom: 20px;
-    width: 100%;
-    margin-bottom: 55px;
+    padding: 1% 0;
+    max-width: 100%;
+    max-height: 2%;
+    margin-bottom: 2%;
 }
 
 .navigation_block {
@@ -64,10 +64,7 @@ button.select-button img {
 }
 
 div#left-button {
-    padding-left: 15%;
     padding-right: 8.5%;
-    padding-top: 2%;
-    padding-bottom: 4%;
     border-right: 5px dashed white;
     display: inline-block;
 }
@@ -82,3 +79,10 @@ div#right-button {
     color: black;
 }
 
+.sections {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
